@@ -1,24 +1,23 @@
 <div class="bg-success p-2 text-center text-white">Sport Commerce</div>
-
 <div class="container-fluid">
   <div class="row">
     <!-- <app-cart-summary></app-cart-summary> -->
   </div>
 </div>
-  <div class="row">
-    <div class="col-3 p-2">
-      <button class="btn btn-block btn-outline-primary">Home</button>
-      <button
-        class="btn btn-block btn-outline-primary"
-        *ngFor="let cat of categories"
-      >
-        {{ cat }}
-      </button>
-      <button class="btn btn-block btn-danger mt-5">Admin</button>
-    </div>
-  
-
+<div class="row">
+  <div class="col-3 p-2">
+    <button class="btn btn-block btn-outline-primary">Home</button>
+    <button
+      class="btn btn-block btn-outline-primary"
+      *ngFor="let cat of categories"
+    >
+      {{ cat }}
+    </button>
+    <button class="btn btn-block btn-danger mt-5">Admin</button>
+  </div>
   <div class="col-9 p-2">
+    <div *ngFor="let product of products" class="card m-1 p-1 bg-light">
+
     <div class="card m-1 p-1 bg-light">
       <h4>{{ product.name }}</h4>
       <span class="badge badge-pill badge-primary float-right">{{
@@ -26,4 +25,5 @@
       }}</span>
     </div>
   </div>
+</div>
 </div>
